@@ -1,0 +1,108 @@
+.header {
+  margin: 0 auto;
+  height: 100vh;
+  background-image: url("/static/assets/img/bg-header.png");
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    content: "";
+    background-image: url("/static/assets/img/before-section.png");
+    background-size: 1920px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    @include web {
+      height: 100px;
+    }
+    @include tablet {
+      height: 60px;
+      background-size: cover;
+    }
+    @include mobile {
+      height: 60px;
+      background-size: cover;
+    }
+  }
+  @include overload {
+    background-position: bottom;
+  }
+  @include web {
+    background-size: cover;
+    height: 100vh !important;
+  }
+  @include tablet {
+    height: 100%;
+    background-position: initial;
+  }
+  @include mobile {
+    height: 100vh;
+    background-size: cover;
+    background-position: initial;
+  }
+}
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    width: 100%;
+    flex-direction: row !important;
+  }
+  @include tablet {
+    width: 100%;
+    flex-direction: row !important;
+  }
+}
+.fix-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    max-width: 100%;
+  }
+  @include tablet {
+    max-width: 100%;
+  }
+}
+.logo img {
+  margin: 0 auto;
+  height: 120px;
+  @include mobile {
+    flex-direction: row !important;
+  }
+  @include tablet {
+    max-width: 100%;
+  }
+}
+//
+.btn-play {
+  margin: 0 auto;
+  position: absolute;
+  bottom: 6%;
+  z-index: 1;
+  width: 250px;
+  @include middle {
+    bottom: 3%;
+    width: 250px;
+  }
+  img {
+    width: 100%;
+  }
+  @include tablet {
+    width: 200px;
+  }
+  @include mobile {
+    width: 200px;
+  }
+}

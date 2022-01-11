@@ -1,0 +1,242 @@
+.custom-button {
+  border: none;
+  background: transparent;
+}
+.custom-button img {
+  width: 100px;
+}
+.character-section {
+  height: 100vh;
+  @include middle {
+    height: 800px;
+  }
+  @include tablet {
+    height: 800px;
+  }
+  @include mobile {
+    height: 500px;
+  }
+  &__container {
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/assets/img/bg.png");
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include overload {
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 100px);
+    }
+    @include middle {
+      display: flex;
+      align-items: center;
+      background-size: cover;
+    }
+    @include tablet {
+      height: 100vh;
+    }
+    @include mobile {
+      height: 100%;
+      padding-bottom: 65px;
+    }
+  }
+
+  &__content {
+    max-width: 1520px;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    @include overload {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    @include middle {
+      justify-content: center;
+    }
+    @include tablet {
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    @include mobile {
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  &__preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 359px;
+
+    @include middle {
+      width: 50%;
+      min-width: 0px;
+    }
+    @include tablet {
+      width: 50%;
+      height: 100%;
+      padding: 5px;
+      min-width: 0;
+    }
+    @include mobile {
+      width: 100%;
+      height: 100%;
+      padding: 5px;
+      min-width: 0;
+    }
+    img {
+      width: 70%;
+      height: auto;
+      @include middle {
+        width: 70%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+      @include mobile {
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+}
+.fullImage {
+  img {
+    width: 100% !important;
+    height: auto;
+  }
+}
+
+.hh-slider {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include tablet {
+    max-width: 40% !important;
+    justify-content: center;
+  }
+  @include mobile {
+    height: 100%;
+    width: 50% !important;
+    justify-content: center;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .slick-slider {
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .slick-track {
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .item-slider {
+    width: 180px !important;
+    height: 130px;
+    @include tablet {
+      width: 120px !important;
+      height: 100%;
+    }
+    @include mobile {
+      width: 80px !important;
+      height: 100%;
+    }
+    img {
+      margin: auto;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .btn-arrow {
+    width: 135px;
+    margin: 12px 0;
+    border: none;
+    background: transparent;
+    img {
+      max-width: 100%;
+    }
+    @include tablet {
+      width: 120px;
+    }
+    @include mobile {
+      width: 90px;
+    }
+  }
+  .btn-prev {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+}
+.carousel-slide {
+  margin: 125px auto !important;
+  height: 350px !important;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  .btn-arrow {
+    width: 150px;
+    margin: 12px 0;
+    border: none;
+    background: transparent;
+    @include tablet {
+      width: 100px;
+      height: 185px;
+    }
+    @include mobile {
+      width: 100px;
+      height: 185px;
+    }
+    img {
+      max-width: 100%;
+    }
+    z-index: 3;
+  }
+  .btn-prev {
+    img {
+      transform: rotate(90deg);
+    }
+  }
+  .btn-next {
+    img {
+      transform: rotate(270deg);
+    }
+  }
+  &:before {
+    width: 280px;
+    height: 330px;
+    position: absolute;
+    left: 50%;
+    z-index: 99;
+    transform: translate(-50%, -50%);
+    background-image: url("/static/assets/img/special-mode/before-special-mode.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    @include tablet {
+      width: 200px;
+    }
+    @include mobile {
+      top: 15%;
+      width: 200px;
+    }
+  }
+}

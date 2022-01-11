@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  font-family: ContentFont;
+}
+
+.faded_preview {
+  animation: faded-preview 1s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $PRIMAMY-COLOR !important;
+}
+
+hr {
+  width: 100%;
+}
+
+.fix-size {
+  max-width: 845px;
+  margin: 0 auto;
+}
+.fix-rs {
+  display: flex;
+  height: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  @include middle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.hh-label {
+  h3 {
+    @include title-styles;
+    @include mobile {
+      height: 60px;
+      font-size: 36px;
+      background-size: cover;
+    }
+    @include tablet {
+      height: 60px;
+      font-size: 36px;
+      background-size: cover;
+    }
+  }
+}
+.hh-roadmap {
+  @include title-styles;
+  position: relative;
+  img {
+    position: absolute;
+    top: 10%;
+    width: 600px;
+    @include mobile {
+      width: 260px;
+    }
+    @include tablet {
+      width: 260px;
+    }
+  }
+  @include mobile {
+    height: 60px;
+    background-size: cover;
+  }
+  @include tablet {
+    height: 60px;
+    background-size: cover;
+  }
+}
+.hh-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //
+  font-family: titleFont;
+  text-shadow: $SHADOW;
+  font-size: 90px;
+  color: $YELLOW-COLOR;
+  height: 152px;
+  text-align: center;
+  @include tablet {
+    height: 100px;
+  }
+  @include mobile {
+    height: 60px;
+  }
+}
+.hh-news-banner {
+  width: 362px;
+  position: relative;
+  @include middle {
+    width: 280px;
+  }
+  @include tablet {
+    width: 270px;
+  }
+  img {
+    @include tablet {
+      width: 60%;
+    }
+    @include mobile {
+      width: 40%;
+    }
+    width: 100%;
+  }
+  @include mobile {
+    margin-top: 0 !important;
+  }
+  h3 {
+    @include middle {
+      font-size: 45px;
+    }
+    @include tablet {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
+    font-size: 70px;
+    position: absolute;
+    font-family: titlefont;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.hh-label-frames {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  img {
+    width: 450px;
+    @include tablet {
+      width: 300px;
+    }
+    @include mobile {
+      width: 300px;
+    }
+  }
+  h3 {
+    position: absolute;
+    @include title-styles-frames;
+    @include tablet {
+      font-size: 30px;
+    }
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+}

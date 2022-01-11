@@ -1,0 +1,53 @@
+@mixin title-styles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //
+  font-family: titleFont;
+  text-shadow: $SHADOW;
+  font-size: 65px;
+  color: $YELLOW-COLOR;
+  height: 100px;
+  background-image: url("/static/assets/img/before-section.png");
+  background-size: 1920px;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+@mixin title-styles-frames {
+  font-family: titleFont;
+  text-shadow: $SHADOW;
+  font-size: 45px;
+  color: $YELLOW-COLOR;
+  text-align: center;
+}
+
+@mixin mobile {
+  @media (max-width: 496px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin middle {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin web {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin overload {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

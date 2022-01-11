@@ -1,0 +1,21 @@
+.whitepaper-container {
+  position: relative;
+  .whitepaper-section {
+    @include overload{
+      max-width: 1520px;
+    }
+    max-width: 1920px;
+    width: 85%;
+    margin: auto;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 0;
+    .white-paper-item {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
